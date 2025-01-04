@@ -1,34 +1,19 @@
-import { Link } from "react-router-dom";
+import { Navbar, NavbarCollapse, NavbarLink } from "flowbite-react";
 
 export default function Header() {
-    return (
-        <div>
-            <nav className="mx-[200px] mt-8">
-                <img src="/images/touringcars.png" alt="Logo" className="w-full h-[30px]"/>
-
-                <ul>
-                    <Link to="/">
-                        <li className="font-poppins font-medium text-[18px] text-[#0C0C0C]">
-                            Sobre
-                        </li>
-                    </Link>
-                    <li className="font-poppins">
-                        <Link to="">
-                            Contato
-                        </Link>
-                    </li>
-                    <li className="font-poppins">
-                        <Link to="">
-                        Anunciar
-                        </Link>
-                    </li>
-                    <li className="font-poppins">
-                        <Link to="">
-                        Estoque
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
+  return (
+    <Navbar fluid rounded className="mx-[200px] mt-[41px] mb-[21px] bg-[#F7F7F7ff]">
+      <a href="/">
+        <img src="/images/touringcars.png" alt="" />
+      </a>
+      <NavbarCollapse>
+        <div className="flex md:gap-[80px]">
+          <NavbarLink href="#" className="font-normal text-[16px] leading-[140%] text-[#333333]">Sobre</NavbarLink>
+          <NavbarLink  href="#" className="font-normal text-[16px] leading-[140%] text-[#333333]">Contato</NavbarLink>
+          <NavbarLink href="#" className="font-normal text-[16px] leading-[140%] text-[#333333]">Anunciar</NavbarLink>
+          <NavbarLink href="#" className="font-normal text-[16px] leading-[140%] text-[#333333]">Estoque</NavbarLink>
         </div>
-    )
+      </NavbarCollapse>
+    </Navbar>
+  );
 }
