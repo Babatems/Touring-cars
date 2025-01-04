@@ -9,10 +9,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        lato: ['Lato', 'sans-serif']
+        poppins: ['Poppins', 'sans-serif'],
+        lato: ['Lato', 'sans-serif'],
       }
     },
   },
-  plugins: [],
+  plugins: [
+    flowbite.plugin(),
+  ],
 }
 
