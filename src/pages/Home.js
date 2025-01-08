@@ -1,6 +1,7 @@
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import React, { useRef } from 'react';
+import SingleModelos from '../components/SingleModelos';
 
 export default function Home() {
   const modelosRef = useRef(null); // Centralized useRef for smooth scrolling
@@ -66,25 +67,33 @@ function Arrow({ onClick }) {
 
 function Modelos({ modelosRef }) {
   return (
-    <div ref={modelosRef} className="mt-[100px] mx-[280px]">
-      <h1 className="font-poppins font-semibold text-[36px] leading-[115%] mb-[50px] w-full">
-        Modelos
-      </h1>
-      <div className="bg-[url('public/images/Electric.png')] w-full h-[300px] rounded-[25px]">
-        <div className='flex flex-row justify-end'>
-          <p className='font-poppins font-semibold text-[20px] leading-[115%] tracking-[-0.7%] text-white'>Eletrico</p>
-          <ArrowForwardIosIcon 
-            style={{
-              width: '30px',
-              height: '34px',
-              color: 'White'
-            }}
-          />
-        </div>
-
-        <div className="flex flex-row gap-10">
-        </div>
+    <div ref={modelosRef} className='"mt-[100px] mx-[280px]'>
+      <h1 className='font-poppins font-semibold text-[36px] mb-[50px] leading-[115%]'>Modelos</h1>
+      <div className="w-[1346px] h-[300px]">
+        <SingleModelos 
+          CarMode="Eletrico"
+          bgImage="/images/Eletric.png"
+          paddingX={502}
+        />
       </div>
-    </div>    
+
+      <div className="flex flex-row gap-10 mt-[50px]">
+        <SingleModelos 
+          CarMode="A Hybrid"
+          bgImage="/images/Hybrid.png"
+          paddingX={40}
+        />    
+        <SingleModelos 
+          CarMode="A Hybrid"
+          bgImage="/images/Hybrid.png"
+          paddingX={40}
+        />    
+        <SingleModelos 
+          CarMode="A Hybrid"
+          bgImage="/images/Hybrid.png"
+          paddingX={40}
+        />    
+      </div>
+    </div>
   );
 }
