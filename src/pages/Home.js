@@ -84,8 +84,8 @@ function Modelos({ modelosRef }) {
           paddingX={40}
         />    
         <SingleModelos 
-          CarMode="A Hybrid"
-          bgImage="/images/Hybrid.png"
+          CarMode="Combustion"
+          bgImage="/images/Combustion.png"
           paddingX={40}
         />    
         <SingleModelos 
