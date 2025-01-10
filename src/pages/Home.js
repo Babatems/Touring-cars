@@ -18,6 +18,7 @@ export default function Home() {
       <Intro />
       <Arrow onClick={scrollToModelos} />
       <Modelos modelosRef={modelosRef} />
+      <Form />
     </div>
   );
 }
@@ -71,7 +72,7 @@ function Modelos({ modelosRef }) {
       <h1 className='font-poppins font-semibold text-[36px] mb-[50px] leading-[115%]'>Modelos</h1>
       <div className="w-[1346px] h-[300px]">
         <SingleModelos 
-          CarMode="Eletrico"
+          CarMode="Elétrico"
           bgImage="/images/Eletric.png"
           paddingX={502}
         />
@@ -89,11 +90,28 @@ function Modelos({ modelosRef }) {
           paddingX={40}
         />    
         <SingleModelos 
-          CarMode="A Hybrid"
-          bgImage="/images/Hybrid.png"
+          CarMode="Elétrico"
+          bgImage="/images/Eletric.png"
           paddingX={40}
         />    
       </div>
     </div>
   );
+}
+
+function Form() {
+  return (
+    <div className='mt-[100px] mx-[280px]'>
+      <h1 className='font-poppins font-semibold text-[36px] leading-[115%] mb-[10px] text-black'>Você está procurando
+      algum modelo em específico?</h1>
+
+      <p className='font-poppins font-normal text-[16px] leading-[115%] tracking-[-0.7%] text-black mb-[50px]'>Deixe seu contato para que a nossa equipe entre em contato com você!</p>
+
+      <div>
+        <div className='flex flex-row gap-10 border-'>
+
+        </div>
+      </div>
+    </div>
+  )
 }
