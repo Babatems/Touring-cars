@@ -109,7 +109,10 @@ function Form() {
 
       <div>
         <div className='flex flex-row gap-10 border-'>
-
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
         </div>
       </div>
     </div>
